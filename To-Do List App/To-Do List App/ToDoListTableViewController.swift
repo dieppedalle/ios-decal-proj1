@@ -36,34 +36,33 @@ class ToDoListTableViewController: UITableViewController {
     }
     
     
-    
+    //let defaults = NSUserDefaults.standardUserDefaults()
     var toDoItems: NSMutableArray = []
     var numCompletedTasks = 0
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if (segue.identifier == "statsSegue") {
             let nav = segue.destinationViewController as! UINavigationController
             let statsViewController = nav.topViewController as! StatsViewController
-            print("\(getNumCompletedTasks())")
-            statsViewController.numCompletedTasks = "\(getNumCompletedTasks())"
+            statsViewController.numCompletedTasks = "\(numCompletedTasks)"
         }
-    }
-    
-    func getNumCompletedTasks() -> Int{
-        return numCompletedTasks
     }
     
     func loadInitialData(){
         
         let item1 = ToDoItem(name: "Buy milk")
         self.toDoItems.addObject(item1)
+        //defaults.setObject(toDoItems, forKey: "toDoItems")
         
         let item2 = ToDoItem(name: "Buy eggs")
         self.toDoItems.addObject(item2)
         
+        
         let item3 = ToDoItem(name: "Read a book")
         self.toDoItems.addObject(item3)
+        
         
     }
     
