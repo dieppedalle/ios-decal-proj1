@@ -14,14 +14,20 @@ class ToDoListTableViewController: UITableViewController {
         print("unwindSecondView fired in forst view")
         let source: AddToDoViewController = segue.sourceViewController as! AddToDoViewController
         
-        let item: ToDoItem = source.toDoItem!
         
-        //if item != nil{
+        
+        if (source.toDoItem != nil){
+            let item: ToDoItem = source.toDoItem!
             self.toDoItems.addObject(item)
             self.tableView.reloadData()
-        //}
+        }
         
         
+        
+    }
+    
+    @IBAction func unwindForSegueCancel(segue: UIStoryboardSegue) {
+        print("unwindSecondView fired in forst view")
         
     }
     

@@ -9,7 +9,7 @@
         <!--Stats View Controller-->
         <scene sceneID="gfI-l4-r4Z">
             <objects>
-                <viewController id="Nks-Rq-ljg" customClass="StatsViewController" customModule="To_Do_List_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nks-Rq-ljg" customClass="StatsViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TwP-V8-aaW"/>
                         <viewControllerLayoutGuide type="bottom" id="Y9r-DP-JGE"/>
@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of tasks completed in the last 24 hours:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2N-zT-Whc">
-                                <rect key="frame" x="20" y="147" width="560" height="80"/>
+                                <rect key="frame" x="20" y="120" width="560" height="85"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMs-Xt-RBl">
-                                <rect key="frame" x="20" y="221" width="560" height="96"/>
+                                <rect key="frame" x="20" y="199" width="560" height="96"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,12 +33,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Y9r-DP-JGE" firstAttribute="top" secondItem="W2N-zT-Whc" secondAttribute="bottom" constant="373" id="1hk-X0-Qxp"/>
-                            <constraint firstItem="W2N-zT-Whc" firstAttribute="top" secondItem="TwP-V8-aaW" secondAttribute="bottom" constant="83" id="Fv9-bX-Z9t"/>
-                            <constraint firstItem="EMs-Xt-RBl" firstAttribute="leading" secondItem="AGj-9v-d9d" secondAttribute="leadingMargin" id="SSf-zX-4uK"/>
-                            <constraint firstItem="EMs-Xt-RBl" firstAttribute="trailing" secondItem="AGj-9v-d9d" secondAttribute="trailingMargin" id="Tjz-fI-KYD"/>
+                            <constraint firstItem="W2N-zT-Whc" firstAttribute="top" secondItem="TwP-V8-aaW" secondAttribute="bottom" constant="56" id="151-99-UG0"/>
+                            <constraint firstItem="W2N-zT-Whc" firstAttribute="trailing" secondItem="AGj-9v-d9d" secondAttribute="trailingMargin" id="DcM-aO-IQ6"/>
                             <constraint firstItem="W2N-zT-Whc" firstAttribute="leading" secondItem="AGj-9v-d9d" secondAttribute="leadingMargin" id="VOO-4U-xV7"/>
+                            <constraint firstItem="EMs-Xt-RBl" firstAttribute="top" secondItem="TwP-V8-aaW" secondAttribute="bottom" constant="135" id="a7f-84-EbK"/>
                             <constraint firstItem="EMs-Xt-RBl" firstAttribute="top" secondItem="W2N-zT-Whc" secondAttribute="bottom" constant="-6" id="au6-sp-IYf"/>
+                            <constraint firstItem="W2N-zT-Whc" firstAttribute="leading" secondItem="AGj-9v-d9d" secondAttribute="leadingMargin" id="qcs-sa-7du"/>
+                            <constraint firstItem="EMs-Xt-RBl" firstAttribute="trailing" secondItem="AGj-9v-d9d" secondAttribute="trailingMargin" id="vbT-mo-Ypa"/>
+                            <constraint firstItem="EMs-Xt-RBl" firstAttribute="leading" secondItem="AGj-9v-d9d" secondAttribute="leadingMargin" id="vdT-j2-Sm3"/>
                             <constraint firstItem="W2N-zT-Whc" firstAttribute="trailing" secondItem="AGj-9v-d9d" secondAttribute="trailingMargin" id="wkn-I9-rfB"/>
                         </constraints>
                     </view>
@@ -61,7 +63,7 @@
         <!--My To-do list-->
         <scene sceneID="IML-Ed-o41">
             <objects>
-                <tableViewController id="4WI-uo-8Fg" customClass="ToDoListTableViewController" customModule="To_Do_List_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4WI-uo-8Fg" customClass="ToDoListTableViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="O86-gh-BSb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +113,7 @@
         <!--Add To-do Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AddToDoViewController" customModule="To_Do_List_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddToDoViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -120,23 +122,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbX-JU-Kr1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BbX-JU-Kr1">
                                 <rect key="frame" x="20" y="171" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a new to-do Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYD-jB-HOl">
+                                <rect key="frame" x="20" y="142" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BbX-JU-Kr1" firstAttribute="top" secondItem="bYD-jB-HOl" secondAttribute="bottom" constant="8" symbolic="YES" id="5cU-bo-sub"/>
                             <constraint firstAttribute="leadingMargin" secondItem="BbX-JU-Kr1" secondAttribute="leading" id="GfO-NZ-bGP"/>
                             <constraint firstItem="BbX-JU-Kr1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="107" id="HRJ-uc-K25"/>
+                            <constraint firstItem="bYD-jB-HOl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fde-2q-0h6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BbX-JU-Kr1" secondAttribute="trailing" id="gbC-Em-IVq"/>
+                            <constraint firstItem="bYD-jB-HOl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="grM-pF-AbD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add To-do Item" id="fhO-RB-JNs">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="P3n-Cp-a1k">
                             <connections>
-                                <segue destination="iAJ-88-Trf" kind="unwind" unwindAction="unwindForSegue:" id="ZDx-iB-zxF"/>
+                                <segue destination="iAJ-88-Trf" kind="unwind" unwindAction="unwindForSegueCancel:" id="TVN-9n-c2v"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Yh3-If-jXF">
