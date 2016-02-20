@@ -11,18 +11,42 @@ import UIKit
 class ToDoListTableViewController: UITableViewController {
     
     @IBAction func unwindForSegue(segue: UIStoryboardSegue) {
-        print("unwindSecondView fired in forst view\n")
+        print("unwindSecondView fired in forst view")
         let source: AddToDoViewController = segue.sourceViewController as! AddToDoViewController
         
         let item: ToDoItem = source.toDoItem!
         
+        //if item != nil{
+            self.toDoItems.addObject(item)
+            self.tableView.reloadData()
+        //}
         
-        self.toDoItems.addObject(item)
-        self.tableView.reloadData()
+        
         
     }
     
+    @IBAction func unwindForSegueStats(segue: UIStoryboardSegue) {
+        print("unwindSecondView fired in forst view")
+    }
+    
+    
+    
     var toDoItems: NSMutableArray = []
+    var numCompletedTasks = 0
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if (segue.identifier == "statsSegue") {
+            let nav = segue.destinationViewController as! UINavigationController
+            let statsViewController = nav.topViewController as! StatsViewController
+            print("\(getNumCompletedTasks())")
+            statsViewController.numCompletedTasks = "\(getNumCompletedTasks())"
+        }
+    }
+    
+    func getNumCompletedTasks() -> Int{
+        return numCompletedTasks
+    }
     
     func loadInitialData(){
         
@@ -88,6 +112,15 @@ class ToDoListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         let tappedItem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
+        if tappedItem.completed {
+            numCompletedTasks -= 1
+            print(numCompletedTasks)
+        }
+        else{
+            numCompletedTasks += 1
+            print(numCompletedTasks)
+        }
+        
         tappedItem.completed = !tappedItem.completed
         tableView.reloadData()
     }

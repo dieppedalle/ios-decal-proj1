@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Stats View Controller-->
         <scene sceneID="gfI-l4-r4Z">
             <objects>
-                <viewController id="Nks-Rq-ljg" sceneMemberID="viewController">
+                <viewController id="Nks-Rq-ljg" customClass="StatsViewController" customModule="To_Do_List_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TwP-V8-aaW"/>
                         <viewControllerLayoutGuide type="bottom" id="Y9r-DP-JGE"/>
@@ -17,12 +17,46 @@
                     <view key="view" contentMode="scaleToFill" id="AGj-9v-d9d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of tasks completed in the last 24 hours:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2N-zT-Whc">
+                                <rect key="frame" x="20" y="147" width="560" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMs-Xt-RBl">
+                                <rect key="frame" x="20" y="221" width="560" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y9r-DP-JGE" firstAttribute="top" secondItem="W2N-zT-Whc" secondAttribute="bottom" constant="373" id="1hk-X0-Qxp"/>
+                            <constraint firstItem="W2N-zT-Whc" firstAttribute="top" secondItem="TwP-V8-aaW" secondAttribute="bottom" constant="83" id="Fv9-bX-Z9t"/>
+                            <constraint firstItem="EMs-Xt-RBl" firstAttribute="leading" secondItem="AGj-9v-d9d" secondAttribute="leadingMargin" id="SSf-zX-4uK"/>
+                            <constraint firstItem="EMs-Xt-RBl" firstAttribute="trailing" secondItem="AGj-9v-d9d" secondAttribute="trailingMargin" id="Tjz-fI-KYD"/>
+                            <constraint firstItem="W2N-zT-Whc" firstAttribute="leading" secondItem="AGj-9v-d9d" secondAttribute="leadingMargin" id="VOO-4U-xV7"/>
+                            <constraint firstItem="EMs-Xt-RBl" firstAttribute="top" secondItem="W2N-zT-Whc" secondAttribute="bottom" constant="-6" id="au6-sp-IYf"/>
+                            <constraint firstItem="W2N-zT-Whc" firstAttribute="trailing" secondItem="AGj-9v-d9d" secondAttribute="trailingMargin" id="wkn-I9-rfB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PdG-h5-6nk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="W1K-T1-cM0">
+                            <connections>
+                                <segue destination="enW-Az-jTN" kind="unwind" unwindAction="unwindForSegueStats:" id="CtQ-JL-9gN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="numCompletedTasksLabel" destination="EMs-Xt-RBl" id="5Uy-HZ-YWX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdR-Ew-r2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="enW-Az-jTN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1384" y="-351"/>
+            <point key="canvasLocation" x="2196" y="-351"/>
         </scene>
         <!--My To-do list-->
         <scene sceneID="IML-Ed-o41">
@@ -58,7 +92,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My To-do list" id="P99-0Q-nzD">
-                        <barButtonItem key="leftBarButtonItem" title="Stats" id="OoH-KG-tzf"/>
+                        <barButtonItem key="leftBarButtonItem" title="Stats" id="OoH-KG-tzf">
+                            <connections>
+                                <segue destination="jKV-3F-mcZ" kind="showDetail" identifier="statsSegue" id="skW-7Q-hwk"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QSr-Pf-5iF">
                             <connections>
                                 <segue destination="TPo-7C-3R6" kind="showDetail" id="QlV-wV-Khe"/>
@@ -152,6 +190,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gq8-dj-0bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1411" y="417"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w6A-f2-6N4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jKV-3F-mcZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KSP-gg-UKC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nks-Rq-ljg" kind="relationship" relationship="rootViewController" id="sco-YU-QbU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rO-iY-X2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="-351"/>
         </scene>
     </scenes>
 </document>

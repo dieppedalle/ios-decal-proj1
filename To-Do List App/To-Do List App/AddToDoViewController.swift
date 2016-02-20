@@ -28,9 +28,9 @@ class AddToDoViewController: UIViewController {
         if sender as? NSObject != self.doneButton{
             return
         }
-        
-        self.toDoItem = ToDoItem(name: self.textField.text!)
-        
+        if !self.textField.text!.isEmpty{
+            self.toDoItem = ToDoItem(name: self.textField.text!)
+        }
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

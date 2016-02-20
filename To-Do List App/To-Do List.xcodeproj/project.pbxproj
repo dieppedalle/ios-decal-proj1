@@ -16,6 +16,7 @@
 		36A2AD761C77C42700C4E856 /* To_Do_List_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2AD751C77C42700C4E856 /* To_Do_List_AppUITests.swift */; };
 		36A2AD841C77DC2800C4E856 /* ToDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2AD831C77DC2800C4E856 /* ToDoListTableViewController.swift */; };
 		36A2AD861C77E6A300C4E856 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2AD851C77E6A300C4E856 /* ToDoItem.swift */; };
+		36AC2E1E1C7834F9000E5DE3 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC2E1D1C7834F9000E5DE3 /* StatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +37,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36A2AD521C77C42700C4E856 /* To-Do List App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do List App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A2AD521C77C42700C4E856 /* To-Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A2AD551C77C42700C4E856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A2AD571C77C42700C4E856 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 		36A2AD5A1C77C42700C4E856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36A2AD5C1C77C42700C4E856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A2AD5F1C77C42700C4E856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36A2AD611C77C42700C4E856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36A2AD661C77C42700C4E856 /* To-Do List AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-Do List AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A2AD661C77C42700C4E856 /* To-Do List.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-Do List.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A2AD6A1C77C42700C4E856 /* To_Do_List_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_List_AppTests.swift; sourceTree = "<group>"; };
 		36A2AD6C1C77C42700C4E856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36A2AD711C77C42700C4E856 /* To-Do List AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-Do List AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A2AD711C77C42700C4E856 /* To-Do List.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-Do List.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A2AD751C77C42700C4E856 /* To_Do_List_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_List_AppUITests.swift; sourceTree = "<group>"; };
 		36A2AD771C77C42700C4E856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36A2AD831C77DC2800C4E856 /* ToDoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewController.swift; sourceTree = "<group>"; };
 		36A2AD851C77E6A300C4E856 /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		36AC2E1D1C7834F9000E5DE3 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +93,9 @@
 		36A2AD531C77C42700C4E856 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36A2AD521C77C42700C4E856 /* To-Do List App.app */,
-				36A2AD661C77C42700C4E856 /* To-Do List AppTests.xctest */,
-				36A2AD711C77C42700C4E856 /* To-Do List AppUITests.xctest */,
+				36A2AD521C77C42700C4E856 /* To-Do List.app */,
+				36A2AD661C77C42700C4E856 /* To-Do List.xctest */,
+				36A2AD711C77C42700C4E856 /* To-Do List.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +106,7 @@
 				36A2AD551C77C42700C4E856 /* AppDelegate.swift */,
 				36A2AD571C77C42700C4E856 /* AddToDoViewController.swift */,
 				36A2AD591C77C42700C4E856 /* Main.storyboard */,
+				36AC2E1D1C7834F9000E5DE3 /* StatsViewController.swift */,
 				36A2AD831C77DC2800C4E856 /* ToDoListTableViewController.swift */,
 				36A2AD851C77E6A300C4E856 /* ToDoItem.swift */,
 				36A2AD5C1C77C42700C4E856 /* Assets.xcassets */,
@@ -134,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36A2AD511C77C42700C4E856 /* To-Do List App */ = {
+		36A2AD511C77C42700C4E856 /* To-Do List */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36A2AD7A1C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do List App" */;
+			buildConfigurationList = 36A2AD7A1C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do List" */;
 			buildPhases = (
 				36A2AD4E1C77C42700C4E856 /* Sources */,
 				36A2AD4F1C77C42700C4E856 /* Frameworks */,
@@ -146,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = "To-Do List App";
+			name = "To-Do List";
 			productName = "To-Do List App";
-			productReference = 36A2AD521C77C42700C4E856 /* To-Do List App.app */;
+			productReference = 36A2AD521C77C42700C4E856 /* To-Do List.app */;
 			productType = "com.apple.product-type.application";
 		};
-		36A2AD651C77C42700C4E856 /* To-Do List AppTests */ = {
+		36A2AD651C77C42700C4E856 /* To-Do ListTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36A2AD7D1C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do List AppTests" */;
+			buildConfigurationList = 36A2AD7D1C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do ListTests" */;
 			buildPhases = (
 				36A2AD621C77C42700C4E856 /* Sources */,
 				36A2AD631C77C42700C4E856 /* Frameworks */,
@@ -164,14 +167,14 @@
 			dependencies = (
 				36A2AD681C77C42700C4E856 /* PBXTargetDependency */,
 			);
-			name = "To-Do List AppTests";
+			name = "To-Do ListTests";
 			productName = "To-Do List AppTests";
-			productReference = 36A2AD661C77C42700C4E856 /* To-Do List AppTests.xctest */;
+			productReference = 36A2AD661C77C42700C4E856 /* To-Do List.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		36A2AD701C77C42700C4E856 /* To-Do List AppUITests */ = {
+		36A2AD701C77C42700C4E856 /* To-Do ListUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36A2AD801C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do List AppUITests" */;
+			buildConfigurationList = 36A2AD801C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do ListUITests" */;
 			buildPhases = (
 				36A2AD6D1C77C42700C4E856 /* Sources */,
 				36A2AD6E1C77C42700C4E856 /* Frameworks */,
@@ -182,9 +185,9 @@
 			dependencies = (
 				36A2AD731C77C42700C4E856 /* PBXTargetDependency */,
 			);
-			name = "To-Do List AppUITests";
+			name = "To-Do ListUITests";
 			productName = "To-Do List AppUITests";
-			productReference = 36A2AD711C77C42700C4E856 /* To-Do List AppUITests.xctest */;
+			productReference = 36A2AD711C77C42700C4E856 /* To-Do List.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 36A2AD4D1C77C42700C4E856 /* Build configuration list for PBXProject "To-Do List App" */;
+			buildConfigurationList = 36A2AD4D1C77C42700C4E856 /* Build configuration list for PBXProject "To-Do List" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -226,9 +229,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				36A2AD511C77C42700C4E856 /* To-Do List App */,
-				36A2AD651C77C42700C4E856 /* To-Do List AppTests */,
-				36A2AD701C77C42700C4E856 /* To-Do List AppUITests */,
+				36A2AD511C77C42700C4E856 /* To-Do List */,
+				36A2AD651C77C42700C4E856 /* To-Do ListTests */,
+				36A2AD701C77C42700C4E856 /* To-Do ListUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +271,7 @@
 				36A2AD581C77C42700C4E856 /* AddToDoViewController.swift in Sources */,
 				36A2AD561C77C42700C4E856 /* AppDelegate.swift in Sources */,
 				36A2AD861C77E6A300C4E856 /* ToDoItem.swift in Sources */,
+				36AC2E1E1C7834F9000E5DE3 /* StatsViewController.swift in Sources */,
 				36A2AD841C77DC2800C4E856 /* ToDoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,12 +297,12 @@
 /* Begin PBXTargetDependency section */
 		36A2AD681C77C42700C4E856 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 36A2AD511C77C42700C4E856 /* To-Do List App */;
+			target = 36A2AD511C77C42700C4E856 /* To-Do List */;
 			targetProxy = 36A2AD671C77C42700C4E856 /* PBXContainerItemProxy */;
 		};
 		36A2AD731C77C42700C4E856 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 36A2AD511C77C42700C4E856 /* To-Do List App */;
+			target = 36A2AD511C77C42700C4E856 /* To-Do List */;
 			targetProxy = 36A2AD721C77C42700C4E856 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -413,7 +417,7 @@
 				INFOPLIST_FILE = "To-Do List App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dieppedalle.To-Do-List-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "To-Do List";
 			};
 			name = Debug;
 		};
@@ -424,7 +428,7 @@
 				INFOPLIST_FILE = "To-Do List App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dieppedalle.To-Do-List-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "To-Do List";
 			};
 			name = Release;
 		};
@@ -435,8 +439,8 @@
 				INFOPLIST_FILE = "To-Do List AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dieppedalle.To-Do-List-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To-Do List App.app/To-Do List App";
+				PRODUCT_NAME = "To-Do List";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To-Do List.app/To-Do List";
 			};
 			name = Debug;
 		};
@@ -447,8 +451,8 @@
 				INFOPLIST_FILE = "To-Do List AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dieppedalle.To-Do-List-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To-Do List App.app/To-Do List App";
+				PRODUCT_NAME = "To-Do List";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To-Do List.app/To-Do List";
 			};
 			name = Release;
 		};
@@ -458,7 +462,7 @@
 				INFOPLIST_FILE = "To-Do List AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dieppedalle.To-Do-List-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "To-Do List";
 				TEST_TARGET_NAME = "To-Do List App";
 				USES_XCTRUNNER = YES;
 			};
@@ -470,7 +474,7 @@
 				INFOPLIST_FILE = "To-Do List AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dieppedalle.To-Do-List-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "To-Do List";
 				TEST_TARGET_NAME = "To-Do List App";
 				USES_XCTRUNNER = YES;
 			};
@@ -479,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36A2AD4D1C77C42700C4E856 /* Build configuration list for PBXProject "To-Do List App" */ = {
+		36A2AD4D1C77C42700C4E856 /* Build configuration list for PBXProject "To-Do List" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36A2AD781C77C42700C4E856 /* Debug */,
@@ -488,29 +492,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36A2AD7A1C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do List App" */ = {
+		36A2AD7A1C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do List" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36A2AD7B1C77C42700C4E856 /* Debug */,
 				36A2AD7C1C77C42700C4E856 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		36A2AD7D1C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do List AppTests" */ = {
+		36A2AD7D1C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do ListTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36A2AD7E1C77C42700C4E856 /* Debug */,
 				36A2AD7F1C77C42700C4E856 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		36A2AD801C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do List AppUITests" */ = {
+		36A2AD801C77C42700C4E856 /* Build configuration list for PBXNativeTarget "To-Do ListUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36A2AD811C77C42700C4E856 /* Debug */,
 				36A2AD821C77C42700C4E856 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
