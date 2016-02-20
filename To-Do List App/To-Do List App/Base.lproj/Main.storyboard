@@ -6,6 +6,24 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="gfI-l4-r4Z">
+            <objects>
+                <viewController id="Nks-Rq-ljg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TwP-V8-aaW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y9r-DP-JGE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AGj-9v-d9d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PdR-Ew-r2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="-351"/>
+        </scene>
         <!--My To-do list-->
         <scene sceneID="IML-Ed-o41">
             <objects>
@@ -32,40 +50,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="M1r-uC-ZmI" style="IBUITableViewCellStyleDefault" id="sYu-5e-4rp">
-                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sYu-5e-4rp" id="3gb-OZ-ILT">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M1r-uC-ZmI">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="gtv-8e-X23" style="IBUITableViewCellStyleDefault" id="ZI5-jm-ehU">
-                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZI5-jm-ehU" id="pCu-l5-Mg2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gtv-8e-X23">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
@@ -74,9 +58,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My To-do list" id="P99-0Q-nzD">
+                        <barButtonItem key="leftBarButtonItem" title="Stats" id="OoH-KG-tzf"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QSr-Pf-5iF">
                             <connections>
-                                <segue destination="TPo-7C-3R6" kind="showDetail" id="c1i-rW-hWB"/>
+                                <segue destination="TPo-7C-3R6" kind="showDetail" id="QlV-wV-Khe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -88,7 +73,7 @@
         <!--Add To-do Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AddToDoViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddToDoViewController" customModule="To_Do_List_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -97,8 +82,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbX-JU-Kr1">
-                                <rect key="frame" x="20" y="127" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbX-JU-Kr1">
+                                <rect key="frame" x="20" y="171" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -113,15 +98,19 @@
                     <navigationItem key="navigationItem" title="Add To-do Item" id="fhO-RB-JNs">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="P3n-Cp-a1k">
                             <connections>
-                                <segue destination="iAJ-88-Trf" kind="unwind" unwindAction="unwindForSegue:" id="VDX-Bd-wSv"/>
+                                <segue destination="iAJ-88-Trf" kind="unwind" unwindAction="unwindForSegue:" id="ZDx-iB-zxF"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Yh3-If-jXF">
                             <connections>
-                                <segue destination="iAJ-88-Trf" kind="unwind" unwindAction="unwindForSegue:" id="40b-Ay-fnO"/>
+                                <segue destination="iAJ-88-Trf" kind="unwind" unwindAction="unwindForSegue:" id="nEN-AA-9gk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="Yh3-If-jXF" id="e5o-H3-1Zw"/>
+                        <outlet property="textField" destination="BbX-JU-Kr1" id="T64-sx-KD4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="iAJ-88-Trf" userLabel="Exit" sceneMemberID="exit"/>

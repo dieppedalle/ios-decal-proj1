@@ -10,21 +10,29 @@ import UIKit
 
 class ToDoListTableViewController: UITableViewController {
     
-    @IBAction func unwindForSegue(unwindSegue: UIStoryboardSegue) {
+    @IBAction func unwindForSegue(segue: UIStoryboardSegue) {
         print("unwindSecondView fired in forst view\n")
+        let source: AddToDoViewController = segue.sourceViewController as! AddToDoViewController
+        
+        let item: ToDoItem = source.toDoItem!
+        
+        
+        self.toDoItems.addObject(item)
+        self.tableView.reloadData()
+        
     }
     
     var toDoItems: NSMutableArray = []
     
     func loadInitialData(){
         
-        var item1 = ToDoItem(name: "Buy milk")
+        let item1 = ToDoItem(name: "Buy milk")
         self.toDoItems.addObject(item1)
         
-        var item2 = ToDoItem(name: "Buy eggs")
+        let item2 = ToDoItem(name: "Buy eggs")
         self.toDoItems.addObject(item2)
         
-        var item3 = ToDoItem(name: "Read a book")
+        let item3 = ToDoItem(name: "Read a book")
         self.toDoItems.addObject(item3)
         
     }
@@ -61,9 +69,9 @@ class ToDoListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let CellIndentifier: NSString = "ListPrototypeCell"
         
-        var cell : UITableViewCell=((tableView.dequeueReusableCellWithIdentifier(CellIndentifier as String)! as UITableViewCell))
+        let cell : UITableViewCell=((tableView.dequeueReusableCellWithIdentifier(CellIndentifier as String)! as UITableViewCell))
         
-        var todoitem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
+        let todoitem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
         
         cell.textLabel!.text = todoitem.itemName as String
         
@@ -79,30 +87,35 @@ class ToDoListTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        var tappedItem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
+        let tappedItem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
         tappedItem.completed = !tappedItem.completed
         tableView.reloadData()
     }
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
+
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            var index = indexPath.row;
+            self.toDoItems.removeObjectAtIndex(index);
+            self.tableView.reloadData()
+            //self.toDoItems.removeObjectAtIndex(indexPath);
+            //self.tableView.reloadData()
+            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
