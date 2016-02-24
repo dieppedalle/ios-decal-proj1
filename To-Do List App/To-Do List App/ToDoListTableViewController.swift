@@ -143,6 +143,7 @@ class ToDoListTableViewController: UITableViewController {
         
         if todoitem.completed{
             cell.accessoryType = .Checkmark
+            todoitem.creationDate = NSDate()
         }
         else{
             cell.accessoryType = .None
