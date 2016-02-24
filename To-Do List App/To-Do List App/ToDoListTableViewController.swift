@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Foundation
 
 class ToDoListTableViewController: UITableViewController {
     
     @IBAction func unwindForSegue(segue: UIStoryboardSegue) {
-        print("unwindSecondView fired in forst view")
+        print("unwindSecondView fired in first view")
         let source: AddToDoViewController = segue.sourceViewController as! AddToDoViewController
         
         
@@ -69,6 +70,8 @@ class ToDoListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadInitialData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "willEnterForground", name: UIApplicationWillEnterForegroundNotification, object: nil)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -76,6 +79,40 @@ class ToDoListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        checkIfOlderThan1Day()
+    }
+    
+    func willEnterForground() {
+        checkIfOlderThan1Day()
+    }
+    
+    func checkIfOlderThan1Day() {
+        let dateYesterday = NSDate().dateByAddingTimeInterval(-3600*24)
+        //let dateYesterday = NSDate().dateByAddingTimeInterval(-5)
+        
+        var numberItems = self.toDoItems.count
+        
+        var currentItem: ToDoItem
+        var index = 0
+        
+        while index < numberItems{
+            
+            currentItem = self.toDoItems.objectAtIndex(index) as! ToDoItem
+            
+            if ((currentItem.creationDate.compare(dateYesterday) == NSComparisonResult.OrderedAscending) && (currentItem.completed)) {
+                self.toDoItems.removeObjectAtIndex(index);
+                numberItems = numberItems - 1
+                numCompletedTasks--
+            }
+            else{
+                index++
+            }
+        }
+        self.tableView.reloadData()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -143,7 +180,12 @@ class ToDoListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            var index = indexPath.row;
+            let index = indexPath.row;
+            
+            if (self.toDoItems.objectAtIndex(index).completed == true) {
+                numCompletedTasks -= 1
+            }
+            
             self.toDoItems.removeObjectAtIndex(index);
             self.tableView.reloadData()
             //self.toDoItems.removeObjectAtIndex(indexPath);
